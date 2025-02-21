@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.Homeworks.HWSEM1;
 import org.example.Lections.Lec1;
 import org.example.Seminars.Sem1;
 
@@ -11,16 +12,31 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // HWSEM1
+        HWSEM1 hwsem1 = new HWSEM1();
+
+        // Первая попытка: корректный ввод
+        String[] strings = {"10", "20", "70"};
+        System.out.println(hwsem1.convertAndSum(strings));
+
+        // Вторая попытка: ввод с некорректным числом
+        String[] invalidStrings = {"10", "20", "abc"};
+        System.out.println(hwsem1.convertAndSum(invalidStrings));
+
+        // Третья попытка: сумма превышает лимит
+        String[] overLimitStrings = {"50", "60"};
+        System.out.println(hwsem1.convertAndSum(overLimitStrings));
+
+
+        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Seminar 1
-        Sem1 sem1 = new Sem1();
-
-        int[][] arr = {{1, 0, 1}, {1, 1, 1}, {0 ,0, 0}};
-        if (sem1.checkArr(arr)){
-            System.out.println("кол-во совпадает");
-        }else {
-            System.out.println("не совпадает");
-        }
-
+//        Sem1 sem1 = new Sem1();
+//        int[][] arr = {{1, 0, 1}, {1, 1, 1}, {0 ,0, 0}};
+//        if (sem1.checkArr(arr)){
+//            System.out.println("кол-во совпадает");
+//        }else {
+//            System.out.println("не совпадает");
+//        }
 
 //        int[] arr1 = {1, 2, 3, 4, 5};
 //        int[] arr2 = {1, 2, 3, 4};
