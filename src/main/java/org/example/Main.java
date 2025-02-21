@@ -2,7 +2,9 @@ package org.example;
 
 import org.example.Homeworks.HWSEM1;
 import org.example.Lections.Lec1;
+import org.example.Lections.Lec2;
 import org.example.Seminars.Sem1;
+import org.example.Seminars.Sem2;
 
 import java.io.File;
 import java.util.Arrays;
@@ -12,20 +14,33 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        // HWSEM1
-        HWSEM1 hwsem1 = new HWSEM1();
+        // Sem2
+        Sem2 sem2 = new Sem2();
+        sem2.task1();
 
-        // Первая попытка: корректный ввод
-        String[] strings = {"10", "20", "70"};
-        System.out.println(hwsem1.convertAndSum(strings));
 
-        // Вторая попытка: ввод с некорректным числом
-        String[] invalidStrings = {"10", "20", "abc"};
-        System.out.println(hwsem1.convertAndSum(invalidStrings));
+        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//        Lec2 lec2 = new Lec2();
+////        lec2.view();
+////        lec2.tryCatch();
+//        lec2.unreportedException();
 
-        // Третья попытка: сумма превышает лимит
-        String[] overLimitStrings = {"50", "60"};
-        System.out.println(hwsem1.convertAndSum(overLimitStrings));
+
+        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//        // HWSEM1
+//        HWSEM1 hwsem1 = new HWSEM1();
+//
+//        // Первая попытка: корректный ввод
+//        String[] strings = {"10", "20", "70"};
+//        System.out.println(hwsem1.convertAndSum(strings));
+//
+//        // Вторая попытка: ввод с некорректным числом
+//        String[] invalidStrings = {"10", "20", "abc"};
+//        System.out.println(hwsem1.convertAndSum(invalidStrings));
+//
+//        // Третья попытка: сумма превышает лимит
+//        String[] overLimitStrings = {"50", "60"};
+//        System.out.println(hwsem1.convertAndSum(overLimitStrings));
 
 
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
