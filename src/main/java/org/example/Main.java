@@ -8,6 +8,7 @@ import org.example.Seminars.Sem2;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.HashMap;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -16,7 +17,12 @@ public class Main {
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Sem2
         Sem2 sem2 = new Sem2();
-        sem2.task1();
+        // Task 3
+        HashMap<String, Integer> map = sem2.readData("TestTask2.txt");
+        sem2.writeData("TestTask2.txt", map);
+
+//        String[][] arr = {{"1", "1", "1", "1", "1"}, {"1", "1", "1", "1", "1"}, {"1", "1", "1", "1", "1"}};
+//        sem2.task1();
 
 
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
