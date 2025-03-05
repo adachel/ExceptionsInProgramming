@@ -4,21 +4,64 @@ import org.example.Homeworks.HWSEM1;
 import org.example.Homeworks.HWSEM2;
 import org.example.Lections.Lec1;
 import org.example.Lections.Lec2;
-import org.example.Seminars.Sem1;
-import org.example.Seminars.Sem2;
+import org.example.Lections.Lec3;
+import org.example.Seminars.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static int calculateSum(String[][] arr) throws MyArraySizeException {
+        if (arr.length != 4 || arr[0].length != 4){
+            throw new MyArraySizeException("");
+        }
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                try {
+                    sum += Integer.parseInt(arr[i][j]);
+                }catch (NumberFormatException e){
+                    throw new MyArraySizeException("Не те данные в ячейке ["+i+"]["+ j+"]");
+                }
+            }
+        }
+        return sum;
+    }
+    public static void main(String[] args) throws Exception{
+        // Sem 3.
+        Sem3 sem3 = new Sem3();
+        String[][] arr = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
+        // метод calculateSum и класс MyArraySizeException
+
+//        try (CounterSem3 counterSem3 = new CounterSem3()){
+//            System.out.println(counterSem3);
+//            counterSem3.add();
+//            System.out.println(counterSem3);
+//        }
+//        CounterSem3 ccc = new CounterSem3();
+//        ccc.add();
+//        ccc.close();
+//        ccc.add(); // исключение. ссс - закрыт
+
+//        try {
+//            sem3.doSomething();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+
+
+        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Lec 3.
+        Lec3 lec3 = new Lec3();
+
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // HomeWork 2
 
-        HWSEM2 hwsem2 = new HWSEM2();
+//        HWSEM2 hwsem2 = new HWSEM2();
 //        String data = "1975-04-30";
 //        System.out.println(hwsem2.validateDate(data));
 
@@ -28,8 +71,8 @@ public class Main {
 //        String[] strings = new String[]{"banana","apple","cherry"};// Значение по умолчанию
 //        hwsem2.sortStrings(strings);
 
-        int[] array = new int[]{10, 20, 30, 40, 50};
-        hwsem2.findAverage(array);
+//        int[] array = new int[]{10, 20, 30, 40, 50};
+//        hwsem2.findAverage(array);
 
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Sem2
