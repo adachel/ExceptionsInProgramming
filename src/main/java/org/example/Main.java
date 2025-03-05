@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Homeworks.HWSEM1;
+import org.example.Homeworks.HWSEM2;
 import org.example.Lections.Lec1;
 import org.example.Lections.Lec2;
 import org.example.Seminars.Sem1;
@@ -15,11 +16,27 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args) {
         /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // HomeWork 2
+
+        HWSEM2 hwsem2 = new HWSEM2();
+//        String data = "1975-04-30";
+//        System.out.println(hwsem2.validateDate(data));
+
+//        String s = "A man a plan a canal Panama";
+//        hwsem2.palindrome(s);
+
+//        String[] strings = new String[]{"banana","apple","cherry"};// Значение по умолчанию
+//        hwsem2.sortStrings(strings);
+
+        int[] array = new int[]{10, 20, 30, 40, 50};
+        hwsem2.findAverage(array);
+
+        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Sem2
-        Sem2 sem2 = new Sem2();
+//        Sem2 sem2 = new Sem2();
         // Task 3
-        HashMap<String, Integer> map = sem2.readData("TestTask2.txt");
-        sem2.writeData("TestTask2.txt", map);
+//        HashMap<String, Integer> map = sem2.readData("TestTask2.txt");
+//        sem2.writeData("TestTask2.txt", map);
 
 //        String[][] arr = {{"1", "1", "1", "1", "1"}, {"1", "1", "1", "1", "1"}, {"1", "1", "1", "1", "1"}};
 //        sem2.task1();
