@@ -1,40 +1,39 @@
 package org.example;
 
-import org.example.Homeworks.HWSEM1;
-import org.example.Homeworks.HWSEM2;
-import org.example.Lections.Lec1;
-import org.example.Lections.Lec2;
+import org.example.Homeworks.HWSEM3Final;
 import org.example.Lections.Lec3;
-import org.example.Seminars.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static int calculateSum(String[][] arr) throws MyArraySizeException {
-        if (arr.length != 4 || arr[0].length != 4){
-            throw new MyArraySizeException("");
-        }
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                try {
-                    sum += Integer.parseInt(arr[i][j]);
-                }catch (NumberFormatException e){
-                    throw new MyArraySizeException("Не те данные в ячейке ["+i+"]["+ j+"]");
-                }
-            }
-        }
-        return sum;
-    }
+//    public static int calculateSum(String[][] arr) throws MyArraySizeException {
+//        if (arr.length != 4 || arr[0].length != 4){
+//            throw new MyArraySizeException("");
+//        }
+//        int sum = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                try {
+//                    sum += Integer.parseInt(arr[i][j]);
+//                }catch (NumberFormatException e){
+//                    throw new MyArraySizeException("Не те данные в ячейке ["+i+"]["+ j+"]");
+//                }
+//            }
+//        }
+//        return sum;
+//    }
     public static void main(String[] args) throws Exception{
+        // HOMEWORK FINAL
+        String name1 = "Петров Петр Николаевич 29.02.2024 +79081223457 m";
+        String name2 = "Иванов Петр Николаевич 22.02.2024 +79081223457 m";
+        String name3 = "Николаев Петр Николаевич 22.02.2024 +79081223457 m";
+        HWSEM3Final hwsem3Final = new HWSEM3Final();
+
+        hwsem3Final.createFile(name1);
+
         // Sem 3.
-        Sem3 sem3 = new Sem3();
-        String[][] arr = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
+//        Sem3 sem3 = new Sem3();
+//        String[][] arr = {{"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}, {"1", "1", "1", "1"}};
         // метод calculateSum и класс MyArraySizeException
 
 //        try (CounterSem3 counterSem3 = new CounterSem3()){
